@@ -20,7 +20,7 @@ class RegisterRequestModel {
       required this.username});
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'name': name,
       'password': password,
       'email': email,
