@@ -1,7 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../presentation/cart/bloc/bloc/cart_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/payment/payment_page.dart';
+import '../../data/models/requests/order_request_model.dart';
 
 import '../../common/components/button.dart';
 import '../../common/components/row_text.dart';
@@ -9,9 +9,10 @@ import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
 
 import '../../common/extensions/int_ext.dart';
-import '../../data/models/responses/products_response_model.dart';
+
+import 'bloc/cart/cart_bloc.dart';
+import 'bloc/order/order_bloc.dart';
 import 'widgets/cart_item.dart';
-import 'widgets/cart_model.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({
@@ -27,6 +28,9 @@ class _CartPageState extends State<CartPage> {
   void initState() {
     super.initState();
   }
+
+  List<Item> items = [];
+  int localTotalPrice = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -82,46 +86,109 @@ class _CartPageState extends State<CartPage> {
                       loaded: (carts) {
                         int totalPrice = 0;
                         carts.forEach((element) {
-                          totalPrice += int.parse(element.product.attributes.price) * element.quantity;
-                        },);
+                          totalPrice +=
+                              int.parse(element.product.attributes.price) *
+                                  element.quantity;
+                        });
+                        localTotalPrice = totalPrice;
+                        items = carts
+                            .map(
+                              (e) => Item(
+                                id: e.product.id,
+                                productName: e.product.attributes.name,
+                                price: int.parse(e.product.attributes.price),
+                                quantity: e.quantity,
+                              ),
+                            )
+                            .toList();
                         return RowText(
                           label: 'Total Harga',
                           value: totalPrice.currencyFormatRp,
                         );
                       },
                     );
-                    // return RowText(
-                    //   label: 'Total Price',
-                    //   value: 1750000.currencyFormatRp,
-                    // );
                   },
                 ),
                 const SpaceHeight(12.0),
-                RowText(
+                const RowText(
                   label: 'Biaya Pengiriman',
-                  value: 150000.currencyFormatRp,
+                  value: 'Free Ongkir',
                 ),
                 const SpaceHeight(40.0),
                 const Divider(color: ColorName.border),
                 const SpaceHeight(12.0),
-                RowText(
-                  label: 'Total Harga',
-                  value: 1900000.currencyFormatRp,
-                  valueColor: ColorName.primary,
-                  fontWeight: FontWeight.w700,
+                BlocBuilder<CartBloc, CartState>(
+                  builder: (context, state) {
+                    return state.maybeWhen(
+                      orElse: () {
+                        return RowText(
+                          label: 'Total Harga',
+                          value: 0.currencyFormatRp,
+                        );
+                      },
+                      loaded: (carts) {
+                        int totalPrice = 0;
+                        carts.forEach(
+                          (element) {
+                            totalPrice +=
+                                int.parse(element.product.attributes.price) *
+                                    element.quantity;
+                          },
+                        );
+                        return RowText(
+                          label: 'Total Harga',
+                          value: totalPrice.currencyFormatRp,
+                        );
+                      },
+                    );
+                  },
                 ),
                 const SpaceHeight(16.0),
-                Button.filled(
-                  onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const PaymentPage(
-                    //             url: '',
-                    //           )),
-                    // );
+                BlocConsumer<OrderBloc, OrderState>(
+                  listener: (context, state) {
+                    state.maybeWhen(
+                      orElse: () {},
+                      success: (response) {
+                        context.read<CartBloc>().add(const CartEvent.started());
+                        Navigator.push(context, MaterialPageRoute(builder: (_) {
+                          return PaymentPage(
+                            invoiceUrl: response.invoiceUrl,
+                            orderId: response.externalId,
+                          );
+                        }));
+                      },
+                    );
                   },
-                  label: 'Bayar Sekarang',
+                  builder: (context, state) {
+                    return state.maybeWhen(
+                      orElse: () {
+                        return Button.filled(
+                          onPressed: () {
+                            context.read<OrderBloc>().add(
+                                  OrderEvent.order(
+                                    OrderRequestModel(
+                                      data: Data(
+                                        items: items,
+                                        totalPrice: localTotalPrice,
+                                        deliveryAddress: 'Jeparaloka, Jepara',
+                                        courierName: 'JNE',
+                                        courierPrice: 0,
+                                        orderStatus: 'waiting-payment',
+                                      ),
+                                    ),
+                                  ),
+                                );
+                          },
+                          label: 'Bayar Sekarang',
+                        );
+                      },
+                      loading: () {
+                        return const Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             ),

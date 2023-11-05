@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../common/extensions/int_ext.dart';
-import '../../../presentation/cart/bloc/bloc/cart_bloc.dart';
 
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
 import '../../../common/constants/images.dart' as localImages;
 import '../../../common/constants/variables.dart';
 
+import '../bloc/cart/cart_bloc.dart';
 import 'cart_model.dart';
 
 class CartItemWidget extends StatefulWidget {

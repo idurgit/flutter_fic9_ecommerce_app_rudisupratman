@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/bloc/cart_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/widgets/cart_model.dart';
+
+import '../../../presentation/cart/widgets/cart_model.dart';
 import '../../../../common/constants/variables.dart';
 import '../../../../common/extensions/int_ext.dart';
 
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
 import '../../../data/models/responses/products_response_model.dart';
+import '../../cart/bloc/cart/cart_bloc.dart';
 import '../../product_detail/product_detail_page.dart';
 
 class ProductCard extends StatelessWidget {

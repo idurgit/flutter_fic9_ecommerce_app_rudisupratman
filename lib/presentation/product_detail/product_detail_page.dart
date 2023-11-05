@@ -8,7 +8,8 @@ import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart' as localImages;
 import '../../data/models/responses/products_response_model.dart';
-import '../cart/bloc/bloc/cart_bloc.dart';
+
+import '../cart/bloc/cart/cart_bloc.dart';
 import '../cart/cart_page.dart';
 import '../cart/widgets/cart_model.dart';
 import '../home/widgets/image_slider.dart';
