@@ -29,6 +29,7 @@ class Data {
   final String courierName;
   final int courierPrice;
   final String orderStatus;
+  final int buyerId;
 
   Data({
     required this.items,
@@ -37,6 +38,7 @@ class Data {
     required this.courierName,
     required this.courierPrice,
     required this.orderStatus,
+    required this.buyerId,
   });
 
   factory Data.fromJson(String str) => Data.fromMap(json.decode(str));
@@ -50,6 +52,7 @@ class Data {
         courierName: json["courierName"],
         courierPrice: json["courierPrice"],
         orderStatus: json["orderStatus"],
+        buyerId: json["buyerId"],
       );
 
   Map<String, dynamic> toMap() => {
@@ -59,6 +62,7 @@ class Data {
         "courierName": courierName,
         "courierPrice": courierPrice,
         "orderStatus": orderStatus,
+        "buyerId" : buyerId,
       };
 }
 

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/home/home_page.dart';
+import '../../../presentation/cart/cart_page.dart';
+import '../../../presentation/home/home_page.dart';
 import '../../../presentation/account/account_page.dart';
-
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
-
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -18,10 +17,10 @@ class _DashboardPageState extends State<DashboardPage> {
 
   final List<Widget> _pages = [
     const HomePage(),
-    const Center(
-      child: Text('Explore Page'),
-    ),
-    const Center(child: Text('Cart Page')),
+    // const Center(
+    //   child: Text('Explore Page'),
+    // ),
+    const CartPage(),
     const AccountPage(),
   ];
 
@@ -46,10 +45,6 @@ class _DashboardPageState extends State<DashboardPage> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage(Images.iconSearch)),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
             icon: ImageIcon(AssetImage(Images.iconCart)),
             label: 'Cart',
           ),
@@ -62,4 +57,3 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 }
-

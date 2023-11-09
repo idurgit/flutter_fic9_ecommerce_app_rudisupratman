@@ -30,7 +30,9 @@ class Images {
 
   //icons.more
   static const String more = 'assets/images/more.png';
-
   static const String iconTrash = 'assets/icons/Trash.png';
+
+  static const String iconBag = 'assets/icons/Bag.png';
+  static const String iconLocation = 'assets/icons/Location.png';
 
 }
