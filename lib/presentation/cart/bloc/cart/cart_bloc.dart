@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/widgets/cart_model.dart';
+import '../../../../presentation/cart/widgets/cart_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'cart_event.dart';

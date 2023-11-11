@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
+import '../../data/datasources/auth_local_datasource.dart';
 import '../../data/models/requests/login_request_model.dart';
 import '../../presentation/auth/bloc/login/login_bloc.dart';
 import '../dashboard/dashboard_page.dart';

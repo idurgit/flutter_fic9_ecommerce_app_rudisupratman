@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../common/components/spaces.dart';
 
 class ProductDescriptionWidget extends StatelessWidget {

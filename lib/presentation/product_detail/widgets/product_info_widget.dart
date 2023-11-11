@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../common/extensions/int_ext.dart';
-
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
 import '../../../data/models/responses/products_response_model.dart';

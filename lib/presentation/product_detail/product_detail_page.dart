@@ -1,19 +1,15 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../common/constants/variables.dart';
-
 import '../../common/components/button.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart' as localImages;
 import '../../data/models/responses/products_response_model.dart';
-
 import '../cart/bloc/cart/cart_bloc.dart';
 import '../cart/cart_page.dart';
 import '../cart/widgets/cart_model.dart';
 import '../home/widgets/image_slider.dart';
-
 import 'widgets/product_description_widget.dart';
 import 'widgets/product_info_widget.dart';
 

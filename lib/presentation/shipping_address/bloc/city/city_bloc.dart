@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../data/datasources/rajaongkir_remote_datasource.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import '../../../../data/models/responses/city_response_model.dart';
 
 part 'city_event.dart';

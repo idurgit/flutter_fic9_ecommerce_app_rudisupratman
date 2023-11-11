@@ -1,8 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../data/models/responses/products_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import '../../../../data/datasources/product_remote_datasource.dart';
 
 part 'products_event.dart';

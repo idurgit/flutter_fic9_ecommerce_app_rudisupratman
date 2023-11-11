@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fic9_ecommerce_app/common/extensions/int_ext.dart';
-
+import '../../../common/extensions/int_ext.dart';
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
 import '../../../data/models/responses/buyer_order_response_model.dart';
-import '../models/order_product_model.dart';
+
 
 class OrderProductTile extends StatelessWidget {
   final Item data;

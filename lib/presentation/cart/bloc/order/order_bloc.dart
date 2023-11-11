@@ -1,9 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../data/datasources/order_remote_datasource.dart';
-
 import '../../../../data/models/requests/order_request_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import '../../../../data/models/responses/order_response_model.dart';
 
 part 'order_event.dart';

@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_fic9_ecommerce_app/common/constants/variables.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/city_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/cost_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/province_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/subdistrict_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/waybill_failed_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/waybill_success_response_model.dart';
+import '../../common/constants/variables.dart';
+import '../../data/models/responses/city_response_model.dart';
+import '../../data/models/responses/cost_response_model.dart';
+import '../../data/models/responses/province_response_model.dart';
+import '../../data/models/responses/subdistrict_response_model.dart';
+import '../../data/models/responses/waybill_failed_response_model.dart';
+import '../../data/models/responses/waybill_success_response_model.dart';
 import 'package:http/http.dart' as http;
 
 class RajaOngkirRemoteDatasource {

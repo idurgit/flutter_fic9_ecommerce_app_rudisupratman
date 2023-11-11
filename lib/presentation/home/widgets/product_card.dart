@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../presentation/cart/widgets/cart_model.dart';
 import '../../../../common/constants/variables.dart';
 import '../../../../common/extensions/int_ext.dart';
-
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
 import '../../../data/models/responses/products_response_model.dart';

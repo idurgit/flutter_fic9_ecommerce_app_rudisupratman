@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/get_address/get_address_bloc.dart';
-
+import '../../presentation/shipping_address/bloc/get_address/get_address_bloc.dart';
 import '../../common/components/button.dart';
 import '../../common/components/spaces.dart';
 import 'add_address_page.dart';

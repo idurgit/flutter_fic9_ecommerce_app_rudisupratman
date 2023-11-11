@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/get_address_response_model.dart';
-
+import '../../../data/models/responses/get_address_response_model.dart';
 import '../../../common/components/button.dart';
-
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
-import '../models/address_model.dart';
 
 class AddressTile extends StatelessWidget {
   final bool isSelected;

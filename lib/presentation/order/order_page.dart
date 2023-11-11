@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../common/components/spaces.dart';
 import 'bloc/buyer_order/buyer_order_bloc.dart';
 import 'models/transaction_model.dart';

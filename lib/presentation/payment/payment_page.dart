@@ -1,12 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
-import 'package:flutter_fic9_ecommerce_app/presentation/payment/bloc/bloc/order_detail_bloc.dart';
-
+import '../../presentation/payment/bloc/bloc/order_detail_bloc.dart';
 import 'widgets/failed_page.dart';
 import 'widgets/success_page.dart';
 

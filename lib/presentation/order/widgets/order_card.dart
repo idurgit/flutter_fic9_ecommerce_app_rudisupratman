@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../common/extensions/int_ext.dart';
 import '../../../data/models/responses/buyer_order_response_model.dart';
-
 import '../../../common/components/button.dart';
 import '../../../common/components/row_text.dart';
-
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
-
 import '../order_detail_page.dart';
 import '../manifest_delivery_page.dart';
 

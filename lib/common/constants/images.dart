@@ -15,6 +15,12 @@ class Images {
 
   static const String recomendedProductBanner =
       'assets/images/RecomendedProductBanner.png';
+  static const String recomendedProductBanner1 =
+      'assets/images/RecomendedProductBanner1.png';
+  static const String recomendedProductBanner2 =
+      'assets/images/RecomendedProductBanner2.png';
+  static const String recomendedProductBanner3 =
+      'assets/images/RecomendedProductBanner3.png';
 
   //icon buy
   static const String iconBuy = 'assets/icons/Buy.png';
@@ -34,5 +40,4 @@ class Images {
 
   static const String iconBag = 'assets/icons/Bag.png';
   static const String iconLocation = 'assets/icons/Location.png';
-
 }

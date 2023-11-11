@@ -7,14 +7,11 @@ import '../../presentation/cart/bloc/get_cost/get_cost_bloc.dart';
 import '../../presentation/shipping_address/bloc/get_address/get_address_bloc.dart';
 import '../../presentation/payment/payment_page.dart';
 import '../../data/models/requests/order_request_model.dart';
-
 import '../../common/components/button.dart';
 import '../../common/components/row_text.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
-
 import '../../common/extensions/int_ext.dart';
-
 import '../shipping_address/shipping_address_page.dart';
 import 'bloc/cart/cart_bloc.dart';
 import 'bloc/order/order_bloc.dart';

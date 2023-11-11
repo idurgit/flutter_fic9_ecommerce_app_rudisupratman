@@ -6,10 +6,8 @@ import '../../common/components/search_input.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
-
 import '../cart/bloc/cart/cart_bloc.dart';
 import 'bloc/products/products_bloc.dart';
-
 import 'widgets/image_slider.dart';
 import 'widgets/product_card.dart';
 import 'widgets/product_model.dart';
@@ -61,9 +59,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> images = [
-      Images.recomendedProductBanner,
-      Images.recomendedProductBanner,
-      Images.recomendedProductBanner,
+      Images.recomendedProductBanner1,
+      Images.recomendedProductBanner2,
+      Images.recomendedProductBanner3,
     ];
 
     return Scaffold(

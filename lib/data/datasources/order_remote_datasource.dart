@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_fic9_ecommerce_app/common/constants/variables.dart';
-import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/requests/add_address_request_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/requests/order_request_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/add_address_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/buyer_order_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/get_address_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/order_detail_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/order_response_model.dart';
+import '../../common/constants/variables.dart';
+import '../../data/datasources/auth_local_datasource.dart';
+import '../../data/models/requests/add_address_request_model.dart';
+import '../../data/models/requests/order_request_model.dart';
+import '../../data/models/responses/add_address_response_model.dart';
+import '../../data/models/responses/buyer_order_response_model.dart';
+import '../../data/models/responses/get_address_response_model.dart';
+import '../../data/models/responses/order_detail_response_model.dart';
+import '../../data/models/responses/order_response_model.dart';
 import 'package:http/http.dart' as http;
 
 class OrderRemoteDatasource {
